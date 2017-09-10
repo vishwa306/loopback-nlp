@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "watsonify": "watsonify",
+    "watsonify": "node server/watsonify.js",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
