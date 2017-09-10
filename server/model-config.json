@@ -16,5 +16,9 @@
   "users": {
     "dataSource": "MySQL",
     "public": true
+  },
+  "ipl": {
+    "dataSource": "MySQL",
+    "public": true
   }
 }

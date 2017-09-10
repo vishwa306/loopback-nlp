@@ -1,21 +1,12 @@
 {
-  "name": "users",
+  "name": "ipl",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "emailid": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
-    "birthday": {
-      "type": "date"
-    },
-    "Team": {
+    "Player": {
       "type": "string"
     }
   },
