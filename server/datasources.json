@@ -1,1 +1,12 @@
-{}
+{
+  "MySQL": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "ibmhackthon",
+    "password": "password",
+    "name": "MySQL",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
