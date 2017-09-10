@@ -86,3 +86,23 @@ conversation.createIntent(params, function(err, response) {
   }
 
 });
+
+for(var p in obj['properties']){
+	var params = {
+	  workspace_id:'ad7e5d93-86a0-4372-a6b2-a86ed7e31234',
+	  entity: p,
+	  fuzzy_match:true,
+	  values: [
+	   
+	  ]
+	};
+
+	conversation.createEntity(params, function(err, response) {
+	  if (err) {
+		console.error(err);
+	  } else {
+		console.log(JSON.stringify(response, null, 2));
+	  }
+
+	});
+}

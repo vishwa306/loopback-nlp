@@ -7,8 +7,9 @@ var app = module.exports = loopback();
 
 var Botkit = require('botkit');
 var controller = Botkit.slackbot();
+console.log(process.env.npm_config_tokenNOD);
 var bot = controller.spawn({
-  token: process.npm_config_botToken
+  token: process.env.npm_config_token
 })
 
 bot.startRTM(function(err,bot,payload) {
@@ -19,10 +20,10 @@ bot.startRTM(function(err,bot,payload) {
 });
 
 
-controller.hears(['*'], function(bot, message) {
-  // write Watson conversation logic here
-  
-})
+controller.hears('^', 'direct_message', function(bot, message) {
+	command = message['text'];
+    //bot.reply(message, 'Hello human. - '+message['text']);
+});
 
 app.start = function() {
   // start the web server
