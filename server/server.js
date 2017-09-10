@@ -5,6 +5,25 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+var Botkit = require('botkit');
+var controller = Botkit.slackbot();
+var bot = controller.spawn({
+  token: process.env.SLACK_BOT_TOKEN
+})
+
+bot.startRTM(function(err,bot,payload) {
+  if (err) {
+    throw new Error('Could not connect to Slack');
+  }
+  
+});
+
+
+controller.hears(['*'], function(bot, message) {
+  // write Watson conversation logic here
+  
+})
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
