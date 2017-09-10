@@ -8,7 +8,7 @@ var app = module.exports = loopback();
 var Botkit = require('botkit');
 var controller = Botkit.slackbot();
 var bot = controller.spawn({
-  token: process.env.SLACK_BOT_TOKEN
+  token: process.npm_config_botToken
 })
 
 bot.startRTM(function(err,bot,payload) {
